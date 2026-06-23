@@ -1,0 +1,7 @@
+{
+  "label": "vanilla-32B-8bit",
+  "base": "mlx-community/Qwen3-32B-8bit",
+  "adapter": "",
+  "selection_acc": 94.02985074626866,
+  "n": 134
+}

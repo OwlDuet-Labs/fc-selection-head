@@ -1,0 +1,21 @@
+{
+  "head": "router",
+  "recipe": "L010-T080-r16-n5",
+  "per_seed": [
+    {
+      "seed": 0,
+      "holdout": 0.9029850746268657
+    },
+    {
+      "seed": 1,
+      "holdout": 0.9104477611940298
+    },
+    {
+      "seed": 2,
+      "holdout": 0.8955223880597015
+    }
+  ],
+  "best_seed": 1,
+  "best_holdout": 0.9104477611940298,
+  "best_adapter": "adapters/m1-router-star/seed1/adapters.safetensors"
+}

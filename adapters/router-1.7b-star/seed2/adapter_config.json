@@ -1,0 +1,12 @@
+{
+  "head": "router",
+  "base_model": "mlx-community/Qwen3-1.7B-bf16",
+  "num_layers": 5,
+  "rank": 16,
+  "star_lambda": 0.1,
+  "star_temp": 0.08,
+  "recipe": "L010-T080-r16-n5",
+  "seed": 2,
+  "best_holdout": 0.9104477611940298,
+  "step": 400
+}

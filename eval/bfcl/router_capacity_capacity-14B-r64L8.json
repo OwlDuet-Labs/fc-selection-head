@@ -1,0 +1,14 @@
+{
+  "label": "capacity-14B-r64L8",
+  "rank": 64,
+  "num_layers": 8,
+  "recipe": "L010-T080-r64-n8",
+  "selection_acc_best": 93.3,
+  "selection_acc_mean": 92.9,
+  "per_seed": [
+    92.5,
+    93.3
+  ],
+  "n_seeds": 2,
+  "source": "adapters/router-14b-scaled/summary.json"
+}

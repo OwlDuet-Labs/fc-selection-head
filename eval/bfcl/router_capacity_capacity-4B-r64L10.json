@@ -1,0 +1,15 @@
+{
+  "label": "capacity-4B-r64L10",
+  "rank": 64,
+  "num_layers": 10,
+  "recipe": "L010-T080-r64-n10",
+  "selection_acc_best": 91.0,
+  "selection_acc_mean": 90.5,
+  "per_seed": [
+    91.0,
+    90.3,
+    90.3
+  ],
+  "n_seeds": 3,
+  "source": "adapters/router-4b-scaled/summary.json"
+}

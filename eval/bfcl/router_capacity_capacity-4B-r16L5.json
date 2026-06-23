@@ -1,0 +1,15 @@
+{
+  "label": "capacity-4B-r16L5",
+  "rank": 16,
+  "num_layers": 5,
+  "recipe": "L010-T080-r16-n5",
+  "selection_acc_best": 91.0,
+  "selection_acc_mean": 91.0,
+  "per_seed": [
+    91.0,
+    91.0,
+    91.0
+  ],
+  "n_seeds": 3,
+  "source": "adapters/router-4b-star/summary.json"
+}

@@ -1,0 +1,21 @@
+{
+  "head": "router",
+  "recipe": "L010-T080-r64-n10",
+  "per_seed": [
+    {
+      "seed": 0,
+      "holdout": 0.9104477611940298
+    },
+    {
+      "seed": 1,
+      "holdout": 0.9029850746268657
+    },
+    {
+      "seed": 2,
+      "holdout": 0.9029850746268657
+    }
+  ],
+  "best_seed": 0,
+  "best_holdout": 0.9104477611940298,
+  "best_adapter": "adapters/router-4b-scaled/seed0/adapters.safetensors"
+}

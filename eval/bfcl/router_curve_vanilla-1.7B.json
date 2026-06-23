@@ -1,0 +1,7 @@
+{
+  "label": "vanilla-1.7B",
+  "base": "mlx-community/Qwen3-1.7B-bf16",
+  "adapter": "",
+  "selection_acc": 86.56716417910447,
+  "n": 134
+}

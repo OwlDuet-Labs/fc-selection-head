@@ -1,0 +1,7 @@
+{
+  "label": "trained-4B",
+  "base": "mlx-community/Qwen3-4B-bf16",
+  "adapter": "adapters/router-4b-star/seed0/adapters.safetensors",
+  "selection_acc": 91.04477611940298,
+  "n": 134
+}

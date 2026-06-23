@@ -1,0 +1,7 @@
+{
+  "label": "trained-0.6B",
+  "base": "mlx-community/Qwen3-0.6B-bf16",
+  "adapter": "adapters/m1-router-star/seed1/adapters.safetensors",
+  "selection_acc": 91.04477611940298,
+  "n": 134
+}

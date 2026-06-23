@@ -1,0 +1,12 @@
+{
+  "head": "router",
+  "base_model": "mlx-community/Qwen3-14B-8bit",
+  "num_layers": 8,
+  "rank": 64,
+  "star_lambda": 0.1,
+  "star_temp": 0.08,
+  "recipe": "L010-T080-r64-n8",
+  "seed": 1,
+  "best_holdout": 0.9328358208955224,
+  "step": 600
+}
