@@ -1,0 +1,15 @@
+{
+  "study": "datascaling",
+  "limitation": "Paper 1 (b) \u2014 training-DATA ceiling control",
+  "parent_split": "data/bfcl_router",
+  "parent_n_train": 919,
+  "size": 500,
+  "n_holdout": 134,
+  "holdout_mode": "symlink",
+  "n_gold_functions_covered": 193,
+  "n_gold_functions_total": 193,
+  "sampling": "deterministic sha256(prompt+gold+K) hash; stratified round-robin over gold functions; nested (size-M subset == M lowest coverage-rank rows)",
+  "source": "BFCL_v4_live_multiple",
+  "fn_desc_sha8": "2c63c596",
+  "star_temp": 0.08
+}
