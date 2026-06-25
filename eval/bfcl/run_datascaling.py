@@ -1,13 +1,13 @@
 #!/usr/bin/env python3
 """Orchestrate + collect the Paper 1 data-scaling study (Limitation b control).
 
-Two modes, no MLX of its own — it only PRINTS the train/eval commands the dev runs,
+Two modes, no MLX of its own — it only PRINTS the train/eval commands you run,
 then COLLECTS their JSON outputs into one curve file:
 
     --plan     enumerate the subset dirs and print the exact train + eval command
-               sequence (one block per subset+seed). The dev runs these (they load
+               sequence (one block per subset+seed). We run these (they load
                MLX); this script never does.
-    --collect  after the dev has trained an adapter per subset and produced the vanilla
+    --collect  after training an adapter per subset and producing the vanilla
                baseline eval, read every subset's trainer summary.json + the shared
                vanilla router_curve JSON and emit
                eval/bfcl/router_datascaling.json:
@@ -72,14 +72,14 @@ def adapter_dir(size: int) -> Path:
 
 
 def emit_plan(subsets, base: str, seeds, vanilla_label: str):
-    """Print the exact, copy-pasteable command sequence the dev runs (no MLX here)."""
+    """Print the exact, copy-pasteable command sequence you run (no MLX here)."""
     if not subsets:
         print("No subsets found. Run `python data/build_datascaling_subsets.py` first.",
               file=sys.stderr)
         sys.exit(2)
 
     seed_str = ",".join(str(s) for s in seeds)
-    print("# ===== data-scaling study — dev command sequence =====")
+    print("# ===== data-scaling study — command sequence =====")
     print("# 0. (once) the size-independent vanilla baseline:")
     print(f"python eval/bfcl/router_eval.py --base {base} --label {vanilla_label}\n")
 
@@ -191,7 +191,7 @@ def main():
                                  formatter_class=argparse.RawDescriptionHelpFormatter)
     mode = ap.add_mutually_exclusive_group(required=True)
     mode.add_argument("--plan", action="store_true",
-                      help="print the dev train+eval command sequence per subset")
+                      help="print we train+eval command sequence per subset")
     mode.add_argument("--collect", action="store_true",
                       help="collect trainer summaries + vanilla baseline into one curve JSON")
     ap.add_argument("--base", default=DEFAULT_BASE, help="base model id for the plan")

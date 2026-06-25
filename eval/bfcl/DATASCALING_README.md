@@ -27,7 +27,7 @@ the shape of trained-vs-vanilla accuracy.
 | File | Role |
 |---|---|
 | `data/build_datascaling_subsets.py` | writes `data/bfcl_router_n<size>/` subsets (train slice + shared holdout + manifest) |
-| `eval/bfcl/run_datascaling.py` | `--plan` prints the dev command sequence; `--collect` assembles `router_datascaling.json` |
+| `eval/bfcl/run_datascaling.py` | `--plan` prints the command sequence; `--collect` assembles `router_datascaling.json` |
 | `figures/fig_datascaling.py` | renders `figures/fig_datascaling_paper.png` from that JSON (placeholder if absent) |
 | `eval/bfcl/router_datascaling.json` | the collected curve `{size: {vanilla_acc, trained_acc_mean, min, max, per_seed, delta}}` |
 
