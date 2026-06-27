@@ -103,34 +103,45 @@ def main():
     chip, ram = chip_info()
     print(f"device: {chip}, {ram} GB")
     contexts = [int(x) for x in args.contexts.split(",")]
+    tag = chip.split()[1].lower() if len(chip.split()) > 1 else "dev"
+    p = Path(args.out) if args.out else Path(__file__).resolve().parent / f"latency_vs_context_{tag}.json"
+
     runs = []
+    def flush():
+        # Save INCREMENTALLY after every measurement so a crash/Ctrl-C keeps completed rows.
+        p.write_text(json.dumps({"chip": chip, "ram_gb": ram, "reps": args.reps, "runs": runs},
+                                indent=2))
+
     for msize in args.models.split(","):
         for q in args.quants.split(","):
             repo = REPO.get((msize, q))
             if repo is None:
                 print(f"  (skip {msize}/{q}: no repo mapped)")
                 continue
-            model, tok = load(repo)
+            try:
+                model, tok = load(repo)
+            except Exception as e:
+                print(f"  (skip {msize}/{q}: load failed: {str(e)[:80]})")
+                continue
             for n_ctx in contexts:
-                ids = make_input(tok, n_ctx)
-                # warmup
-                time_one(model, ids)
-                samples = [time_one(model, ids) for _ in range(args.reps)]
-                ms = sorted(s[0] for s in samples)[len(samples) // 2]
-                peak = max(s[1] for s in samples)
-                runs.append({"model": msize, "quant": q, "context_tokens": n_ctx,
-                             "median_ms": round(ms, 1), "peak_gb": round(peak, 2)})
-                print(f"  {msize}/{q}  ctx={n_ctx:5}tok  median={ms:7.1f}ms  peak={peak:.2f}GB")
+                try:
+                    ids = make_input(tok, n_ctx)
+                    time_one(model, ids)  # warmup
+                    samples = [time_one(model, ids) for _ in range(args.reps)]
+                    ms = sorted(s[0] for s in samples)[len(samples) // 2]
+                    peak = max(s[1] for s in samples)
+                    runs.append({"model": msize, "quant": q, "context_tokens": n_ctx,
+                                 "median_ms": round(ms, 1), "peak_gb": round(peak, 2)})
+                    print(f"  {msize}/{q}  ctx={n_ctx:5}tok  median={ms:7.1f}ms  peak={peak:.2f}GB")
+                    flush()  # <-- persist after each point
+                except Exception as e:
+                    print(f"  ({msize}/{q} ctx={n_ctx}: FAILED {str(e)[:60]}) — skipping, prior rows saved")
+                    flush()
             del model
             mx.clear_cache()
 
-    out = {"chip": chip, "ram_gb": ram, "reps": args.reps, "runs": runs}
-    tag = chip.split()[1].lower() if len(chip.split()) > 1 else "dev"
-    # Write next to this script (portable: works no matter the cwd), unless --out given.
-    p = Path(args.out) if args.out else Path(__file__).resolve().parent / f"latency_vs_context_{tag}.json"
-    p.write_text(json.dumps(out, indent=2))
-    print(f"=== wrote {p} (device: {chip}, {ram}GB) ===")
-    print(json.dumps(out, indent=2))  # also dump to stdout so you can paste it back
+    print(f"=== wrote {p} (device: {chip}, {ram}GB; {len(runs)} rows) ===")
+    print(json.dumps({"chip": chip, "ram_gb": ram, "reps": args.reps, "runs": runs}, indent=2))
 
 
 if __name__ == "__main__":
