@@ -1,0 +1,1631 @@
+{
+  "label": "sonnet",
+  "backend": "anthropic",
+  "model": "claude-sonnet-4-6",
+  "levels": {
+    "names": {
+      "selection_acc": 91.7910447761194,
+      "parse_rate": 99.25373134328358,
+      "median_prompt_tok": 102,
+      "n": 134,
+      "log": [
+        {
+          "gold": "ChaDri.change_drink",
+          "pick": "ChaFod",
+          "ok": false,
+          "n_cand": 2
+        },
+        {
+          "gold": "HNA_NEWS.search",
+          "pick": "HNA_NEWS.search",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "ControlAppliance.execute",
+          "pick": "ControlAppliance.execute",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "get_news_report",
+          "pick": "get_news_report",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "todo_delete",
+          "pick": "todo_delete",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "BankStatementOverView",
+          "pick": "BankStatementOverView",
+          "ok": true,
+          "n_cand": 8
+        },
+        {
+          "gold": "inventory_management",
+          "pick": "inventory_management",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "get_current_weather",
+          "pick": "get_current_weather",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "add_postgres_server",
+          "pick": "add_postgres_server",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "add_mtnards_server",
+          "pick": "dartfx_help",
+          "ok": false,
+          "n_cand": 4
+        },
+        {
+          "gold": "list_servers",
+          "pick": "list_servers",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "list_servers",
+          "pick": "list_servers",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "connect_to_server",
+          "pick": "connect_to_server",
+          "ok": true,
+          "n_cand": 9
+        },
+        {
+          "gold": "search_engine.query",
+          "pick": "search_engine.query",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "generate_human_image",
+          "pick": "generate_image",
+          "ok": false,
+          "n_cand": 5
+        },
+        {
+          "gold": "weather.get_weather",
+          "pick": "weather.get_weather",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "stock_price.get",
+          "pick": "stock_price.get",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_sensor_readings_latest",
+          "pick": "get_sensor_readings_latest",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "get_detail_adriel_project",
+          "pick": "get_detail_adriel_project",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "CalcProduct",
+          "pick": "CalcProduct",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "adriel_tech_stack",
+          "pick": "adriel_tech_stack",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "get_sensor_readings_latest",
+          "pick": "get_sensor_readings_history",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_contact_information",
+          "pick": "get_contact_information",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "set_integer",
+          "pick": "set_integer",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "tts_tool",
+          "pick": "tts_tool",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "version_api.VersionApi.get_version",
+          "pick": "version_api.VersionApi.get_version",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "vex_api.VexApi.export_project_as_cyclone_dx1",
+          "pick": "vex_api.VexApi.export_project_as_cyclone_dx1",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "project_api.ProjectApi.get_project_by_name_and_version",
+          "pick": "project_api.ProjectApi.get_project_by_name_and_version",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Restaurants_2_FindRestaurants",
+          "pick": "Restaurants_2_FindRestaurants",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Restaurants_2_FindRestaurants",
+          "pick": "Restaurants_2_FindRestaurants",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Restaurants_2_FindRestaurants",
+          "pick": "Restaurants_2_FindRestaurants",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Hotels_2_SearchHouse",
+          "pick": "Hotels_2_SearchHouse",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Hotels_2_SearchHouse",
+          "pick": "Hotels_2_SearchHouse",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Alarm_1_GetAlarms",
+          "pick": "Alarm_1_GetAlarms",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_1_BuyMovieTickets",
+          "pick": "Movies_1_BuyMovieTickets",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_1_BuyMovieTickets",
+          "pick": "Movies_1_BuyMovieTickets",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_1_BuyMovieTickets",
+          "pick": "Movies_1_BuyMovieTickets",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "RentalCars_3_GetCarsAvailable",
+          "pick": "RentalCars_3_GetCarsAvailable",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Flights_4_SearchRoundtripFlights",
+          "pick": "Flights_4_SearchRoundtripFlights",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Travel_1_FindAttractions",
+          "pick": "Travel_1_FindAttractions",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Trains_1_GetTrainTickets",
+          "pick": "Trains_1_GetTrainTickets",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "Movies_1_FindMovies",
+          "pick": "Movies_1_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Movies_1_FindMovies",
+          "pick": "Movies_1_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Homes_2_FindHomeByArea",
+          "pick": "Homes_2_FindHomeByArea",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Homes_2_FindHomeByArea",
+          "pick": "Homes_2_FindHomeByArea",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "RentalCars_3_GetCarsAvailable",
+          "pick": "RentalCars_3_GetCarsAvailable",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Services_1_FindProvider",
+          "pick": "Services_1_FindProvider",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Services_1_FindProvider",
+          "pick": "Services_1_FindProvider",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Hotels_4_SearchHotel",
+          "pick": "Hotels_4_SearchHotel",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Hotels_4_SearchHotel",
+          "pick": "Hotels_4_ReserveHotel",
+          "ok": false,
+          "n_cand": 2
+        },
+        {
+          "gold": "Hotels_4_SearchHotel",
+          "pick": "Hotels_4_SearchHotel",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Payment_1_RequestPayment",
+          "pick": "Payment_1_RequestPayment",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Payment_1_RequestPayment",
+          "pick": "Payment_1_RequestPayment",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_PlayMedia",
+          "pick": "Music_3_PlayMedia",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 8
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 8
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Hotels_2_BookHouse",
+          "pick": "Hotels_2_BookHouse",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Hotels_2_SearchHouse",
+          "pick": "Hotels_2_SearchHouse",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Homes_2_FindHomeByArea",
+          "pick": "Homes_2_FindHomeByArea",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Payment_1_MakePayment",
+          "pick": "Payment_1_MakePayment",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Media_3_FindMovies",
+          "pick": "Media_3_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Media_3_FindMovies",
+          "pick": "Media_3_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "RentalCars_3_GetCarsAvailable",
+          "pick": "RentalCars_3_GetCarsAvailable",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "RentalCars_3_GetCarsAvailable",
+          "pick": "RentalCars_3_GetCarsAvailable",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Homes_2_ScheduleVisit",
+          "pick": "Homes_2_ScheduleVisit",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Weather_1_GetWeather",
+          "pick": "Weather_1_GetWeather",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Alarm_1_AddAlarm",
+          "pick": "Alarm_1_AddAlarm",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Alarm_1_AddAlarm",
+          "pick": "Alarm_1_AddAlarm",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Music_3_PlayMedia",
+          "pick": "Music_3_PlayMedia",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Music_3_PlayMedia",
+          "pick": "Music_3_LookupMusic",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Restaurants_2_FindRestaurants",
+          "pick": "Restaurants_2_FindRestaurants",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Buses_3_FindBus",
+          "pick": "Buses_3_FindBus",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Trains_1_FindTrains",
+          "pick": "Trains_1_FindTrains",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Movies_1_FindMovies",
+          "pick": "Movies_1_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Buses_3_FindBus",
+          "pick": "Buses_3_FindBus",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Buses_3_FindBus",
+          "pick": "Buses_3_FindBus",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Payment_1_RequestPayment",
+          "pick": "Payment_1_RequestPayment",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Payment_1_MakePayment",
+          "pick": "Payment_1_MakePayment",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Payment_1_MakePayment",
+          "pick": "Payment_1_MakePayment",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Trains_1_FindTrains",
+          "pick": "Trains_1_FindTrains",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": null,
+          "ok": false,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "play_song",
+          "pick": "play_song",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "play_song",
+          "pick": "play_song",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "handover_to_human_agent",
+          "pick": "transfer_to_human_agent",
+          "ok": false,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "api_token_api.APITokenApi.get_api_tokens",
+          "pick": "api_token_api.APITokenApi.get_api_tokens",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "host_agent_api.HostAgentApi.get_agent_snapshot",
+          "pick": "host_agent_api.HostAgentApi.get_agent_snapshot",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "CustomDashboardsApi.get_custom_dashboards",
+          "pick": "CustomDashboardsApi.get_custom_dashboard",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_synthetic_credential_names",
+          "pick": "get_synthetic_credential_names",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "version_api.VersionApi.get_version",
+          "pick": "version_api.VersionApi.get_version",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "MaintenanceConfigurationApi.get_maintenance_config",
+          "pick": "MaintenanceConfigurationApi.get_maintenance_config",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_website_geo_mapping_rules",
+          "pick": "get_website_geo_mapping_rules",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_custom_dashboard",
+          "pick": "get_custom_dashboard",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_synthetic_locations",
+          "pick": "get_synthetic_locations",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "SyntheticSettingsApi.get_synthetic_locations",
+          "pick": "SyntheticSettingsApi.get_synthetic_location",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "detail_experience_and_education",
+          "pick": "detail_experience_and_education",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "get_sensor_readings_history_by_interval",
+          "pick": "get_sensor_readings_history",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "Hotels_2_SearchHouse",
+          "pick": "Hotels_2_SearchHouse",
+          "ok": true,
+          "n_cand": 2
+        }
+      ]
+    },
+    "schema": {
+      "selection_acc": 95.5223880597015,
+      "parse_rate": 100.0,
+      "median_prompt_tok": 859,
+      "n": 134,
+      "log": [
+        {
+          "gold": "ChaDri.change_drink",
+          "pick": "ChaDri.change_drink",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "HNA_NEWS.search",
+          "pick": "HNA_NEWS.search",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "ControlAppliance.execute",
+          "pick": "ControlAppliance.execute",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "get_news_report",
+          "pick": "get_news_report",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "todo_delete",
+          "pick": "todo_delete",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "BankStatementOverView",
+          "pick": "BankStatementOverView",
+          "ok": true,
+          "n_cand": 8
+        },
+        {
+          "gold": "inventory_management",
+          "pick": "inventory_management",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "get_current_weather",
+          "pick": "get_current_weather",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "add_postgres_server",
+          "pick": "add_postgres_server",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "add_mtnards_server",
+          "pick": "dartfx_help",
+          "ok": false,
+          "n_cand": 4
+        },
+        {
+          "gold": "list_servers",
+          "pick": "list_servers",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "list_servers",
+          "pick": "list_servers",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "connect_to_server",
+          "pick": "connect_to_server",
+          "ok": true,
+          "n_cand": 9
+        },
+        {
+          "gold": "search_engine.query",
+          "pick": "search_engine.query",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "generate_human_image",
+          "pick": "generate_human_image",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "weather.get_weather",
+          "pick": "weather.get_weather",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "stock_price.get",
+          "pick": "stock_price.get",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_sensor_readings_latest",
+          "pick": "get_sensor_readings_latest",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "get_detail_adriel_project",
+          "pick": "get_detail_adriel_project",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "CalcProduct",
+          "pick": "CalcProduct",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "adriel_tech_stack",
+          "pick": "adriel_tech_stack",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "get_sensor_readings_latest",
+          "pick": "get_sensor_readings_latest",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_contact_information",
+          "pick": "get_contact_information",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "set_integer",
+          "pick": "set_integer",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "tts_tool",
+          "pick": "tts_tool",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "version_api.VersionApi.get_version",
+          "pick": "version_api.VersionApi.get_version",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "vex_api.VexApi.export_project_as_cyclone_dx1",
+          "pick": "vex_api.VexApi.export_project_as_cyclone_dx1",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "project_api.ProjectApi.get_project_by_name_and_version",
+          "pick": "project_api.ProjectApi.get_project_by_name_and_version",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Restaurants_2_FindRestaurants",
+          "pick": "Restaurants_2_FindRestaurants",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Restaurants_2_FindRestaurants",
+          "pick": "Restaurants_2_FindRestaurants",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Restaurants_2_FindRestaurants",
+          "pick": "Restaurants_2_FindRestaurants",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Hotels_2_SearchHouse",
+          "pick": "Hotels_2_SearchHouse",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Hotels_2_SearchHouse",
+          "pick": "Hotels_2_SearchHouse",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Alarm_1_GetAlarms",
+          "pick": "Alarm_1_GetAlarms",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_1_BuyMovieTickets",
+          "pick": "Movies_1_BuyMovieTickets",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_1_BuyMovieTickets",
+          "pick": "Movies_1_BuyMovieTickets",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_1_BuyMovieTickets",
+          "pick": "Movies_1_BuyMovieTickets",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "RentalCars_3_GetCarsAvailable",
+          "pick": "RentalCars_3_GetCarsAvailable",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Flights_4_SearchRoundtripFlights",
+          "pick": "Flights_4_SearchRoundtripFlights",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Travel_1_FindAttractions",
+          "pick": "Travel_1_FindAttractions",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Trains_1_GetTrainTickets",
+          "pick": "Trains_1_GetTrainTickets",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "Movies_1_FindMovies",
+          "pick": "Movies_1_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Movies_1_FindMovies",
+          "pick": "Movies_1_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Homes_2_FindHomeByArea",
+          "pick": "Homes_2_FindHomeByArea",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Homes_2_FindHomeByArea",
+          "pick": "Homes_2_FindHomeByArea",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "RentalCars_3_GetCarsAvailable",
+          "pick": "RentalCars_3_GetCarsAvailable",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Services_1_FindProvider",
+          "pick": "Services_1_FindProvider",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Services_1_FindProvider",
+          "pick": "Services_1_FindProvider",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Hotels_4_SearchHotel",
+          "pick": "Hotels_4_SearchHotel",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Hotels_4_SearchHotel",
+          "pick": "Hotels_4_SearchHotel",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Hotels_4_SearchHotel",
+          "pick": "Hotels_4_SearchHotel",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Payment_1_RequestPayment",
+          "pick": "Payment_1_RequestPayment",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Payment_1_RequestPayment",
+          "pick": "Payment_1_RequestPayment",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Music_3_PlayMedia",
+          "pick": "Music_3_PlayMedia",
+          "ok": true,
+          "n_cand": 6
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 8
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 8
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Movies_3_FindMovies",
+          "pick": "Movies_3_FindMovies",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Hotels_2_BookHouse",
+          "pick": "Hotels_2_BookHouse",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Hotels_2_SearchHouse",
+          "pick": "Hotels_2_BookHouse",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "Homes_2_FindHomeByArea",
+          "pick": "Homes_2_FindHomeByArea",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Payment_1_MakePayment",
+          "pick": "Payment_1_MakePayment",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Media_3_FindMovies",
+          "pick": "Media_3_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Media_3_FindMovies",
+          "pick": "Media_3_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "RentalCars_3_GetCarsAvailable",
+          "pick": "RentalCars_3_GetCarsAvailable",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "RentalCars_3_GetCarsAvailable",
+          "pick": "RentalCars_3_GetCarsAvailable",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Services_4_FindProvider",
+          "pick": "Services_4_FindProvider",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Homes_2_ScheduleVisit",
+          "pick": "Homes_2_ScheduleVisit",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Weather_1_GetWeather",
+          "pick": "Weather_1_GetWeather",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Alarm_1_AddAlarm",
+          "pick": "Alarm_1_AddAlarm",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Alarm_1_AddAlarm",
+          "pick": "Alarm_1_AddAlarm",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Events_3_FindEvents",
+          "pick": "Events_3_FindEvents",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Music_3_PlayMedia",
+          "pick": "Music_3_LookupMusic",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "Music_3_PlayMedia",
+          "pick": "Music_3_PlayMedia",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Music_3_LookupMusic",
+          "pick": "Music_3_LookupMusic",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "Restaurants_2_FindRestaurants",
+          "pick": "Restaurants_2_FindRestaurants",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Buses_3_FindBus",
+          "pick": "Buses_3_FindBus",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Trains_1_FindTrains",
+          "pick": "Trains_1_FindTrains",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "Movies_1_FindMovies",
+          "pick": "Movies_1_FindMovies",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Buses_3_FindBus",
+          "pick": "Buses_3_FindBus",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Buses_3_FindBus",
+          "pick": "Buses_3_FindBus",
+          "ok": true,
+          "n_cand": 5
+        },
+        {
+          "gold": "Payment_1_RequestPayment",
+          "pick": "Payment_1_RequestPayment",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Payment_1_MakePayment",
+          "pick": "Payment_1_MakePayment",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Payment_1_MakePayment",
+          "pick": "Payment_1_MakePayment",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "Trains_1_FindTrains",
+          "pick": "Trains_1_FindTrains",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "play_song",
+          "pick": "play_song",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "play_song",
+          "pick": "play_song",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "handover_to_human_agent",
+          "pick": "handover_to_human_agent",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "get_service_providers",
+          "pick": "get_service_providers",
+          "ok": true,
+          "n_cand": 2
+        },
+        {
+          "gold": "api_token_api.APITokenApi.get_api_tokens",
+          "pick": "api_token_api.APITokenApi.get_api_tokens",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "host_agent_api.HostAgentApi.get_agent_snapshot",
+          "pick": "host_agent_api.HostAgentApi.get_agent_snapshot",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "CustomDashboardsApi.get_custom_dashboards",
+          "pick": "CustomDashboardsApi.get_custom_dashboard",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_synthetic_credential_names",
+          "pick": "get_synthetic_credential_names",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "version_api.VersionApi.get_version",
+          "pick": "version_api.VersionApi.get_version",
+          "ok": true,
+          "n_cand": 4
+        },
+        {
+          "gold": "MaintenanceConfigurationApi.get_maintenance_config",
+          "pick": "MaintenanceConfigurationApi.get_maintenance_config",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_website_geo_mapping_rules",
+          "pick": "get_website_geo_mapping_rules",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_custom_dashboard",
+          "pick": "get_custom_dashboard",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "get_synthetic_locations",
+          "pick": "get_synthetic_locations",
+          "ok": true,
+          "n_cand": 3
+        },
+        {
+          "gold": "SyntheticSettingsApi.get_synthetic_locations",
+          "pick": "SyntheticSettingsApi.get_synthetic_location",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "detail_experience_and_education",
+          "pick": "detail_experience_and_education",
+          "ok": true,
+          "n_cand": 7
+        },
+        {
+          "gold": "get_sensor_readings_history_by_interval",
+          "pick": "get_sensor_readings_history",
+          "ok": false,
+          "n_cand": 3
+        },
+        {
+          "gold": "Hotels_2_SearchHouse",
+          "pick": "Hotels_2_SearchHouse",
+          "ok": true,
+          "n_cand": 2
+        }
+      ]
+    }
+  }
+}

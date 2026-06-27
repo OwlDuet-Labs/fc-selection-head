@@ -1,0 +1,22 @@
+{
+  "label": "trained-0.6B",
+  "base": "mlx-community/Qwen3-0.6B-bf16",
+  "adapter": "adapters/m1-router-star/seed1/adapters.safetensors",
+  "levels": {
+    "names": {
+      "selection_acc": 91.04477611940298,
+      "median_prompt_tok": 149,
+      "n": 134
+    },
+    "desc": {
+      "selection_acc": 85.82089552238806,
+      "median_prompt_tok": 208,
+      "n": 134
+    },
+    "schema": {
+      "selection_acc": 80.59701492537313,
+      "median_prompt_tok": 956,
+      "n": 134
+    }
+  }
+}
