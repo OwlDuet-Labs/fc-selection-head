@@ -60,14 +60,25 @@ def _xlam_fc_prompt(tokenizer, inst, schemas):
         [{"role": "user", "content": instr}], tokenize=False, add_generation_prompt=True)
 
 
-def render_prompt(tokenizer, inst, name2schema, model_id=""):
-    """Native function-call prompt: user query + candidate functions as tools."""
+def render_prompt(tokenizer, inst, name2schema, model_id="", context_level="schema"):
+    """Native function-call prompt: user query + candidate functions as tools.
+
+    context_level controls how much per-candidate documentation goes in the tool spec, so the
+    SAME validated native-format harness measures the context-richness axis:
+      schema (default) : full BFCL schema (params + types + description)
+      desc             : name + description only (no parameters)
+      names            : name only (minimal context, matched to the selector head)"""
     schemas = []
     for c in inst["candidates"]:
-        sch = name2schema.get(c["id"])
-        if sch is None:                       # fall back to id+desc (shouldn't happen)
-            sch = {"name": c["id"], "description": c.get("desc", ""),
+        full = name2schema.get(c["id"]) or {"name": c["id"], "description": c.get("desc", ""),
+                                             "parameters": {"type": "object", "properties": {}}}
+        if context_level == "names":
+            sch = {"name": full["name"], "parameters": {"type": "object", "properties": {}}}
+        elif context_level == "desc":
+            sch = {"name": full["name"], "description": full.get("description", c.get("desc", "")),
                    "parameters": {"type": "object", "properties": {}}}
+        else:
+            sch = full
         schemas.append(sch)
     ct = (tokenizer.chat_template or "")
     # xLAM-fc-r's template does NOT honor tools= (no 'tools' token) — inject manually.
@@ -119,6 +130,7 @@ def main():
     ap.add_argument("--data", default="data/bfcl_router")
     ap.add_argument("--max-n", type=int, default=200)
     ap.add_argument("--max-tokens", type=int, default=128)
+    ap.add_argument("--context-level", default="schema", choices=["names", "desc", "schema"])
     args = ap.parse_args()
 
     name2schema = build_name2schema()
@@ -128,7 +140,8 @@ def main():
     log, correct, parsed = [], 0, 0
     for i, inst in enumerate(holdout):
         valid = {c["id"] for c in inst["candidates"]}
-        prompt = render_prompt(tokenizer, inst, name2schema, model_id=args.model)
+        prompt = render_prompt(tokenizer, inst, name2schema, model_id=args.model,
+                               context_level=args.context_level)
         out = generate(model, tokenizer, prompt=prompt, max_tokens=args.max_tokens, verbose=False)
         name = parse_name(out, valid)
         pick = next((j + 1 for j, c in enumerate(inst["candidates"]) if c["id"] == name), -1)
@@ -143,7 +156,8 @@ def main():
     n = len(holdout)
     res = {"label": args.label, "model": args.model, "data": args.data, "n": n,
            "selection_acc": 100 * correct / n, "parse_rate": 100 * parsed / n, "log": log}
-    out = Path("eval/bfcl") / f"trained_fc_{args.label}.json"
+    suffix = "" if args.context_level == "schema" else f"_{args.context_level}"
+    out = Path("eval/bfcl") / f"trained_fc_{args.label}{suffix}.json"
     out.write_text(json.dumps(res, indent=2))
     print(f"=== {args.label} ({args.model}): selection-acc {res['selection_acc']:.1f}% "
           f"(parse {res['parse_rate']:.0f}%, n={n}) → {out} ===")
