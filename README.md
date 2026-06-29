@@ -1,7 +1,8 @@
 # fc-selection-head
 
 Reproduction code for *Cheap Heads, Not Bigger Bases: A Trained 0.6B Function-Call
-Selector Matches a Vanilla Model Seven Times Its Size* (T. Drake, OwlDuet Inc., 2026).
+Selector Matches a Vanilla Model Seven Times Its Size* (under double-blind review; author
+information withheld during review).
 
 A frozen small base model plus a cheap trained **selector head** (a DoRA adapter, ~0.14%
 of base parameters) matches a vanilla base seven times its size on BFCL `live_multiple`
@@ -75,11 +76,11 @@ Apache-2.0 (see `LICENSE`).
 ## Citation
 
 ```bibtex
-@misc{drake2026cheapheads,
+@misc{cheapheads2026,
   title  = {Cheap Heads, Not Bigger Bases: A Trained 0.6B Function-Call Selector
             Matches a Vanilla Model Seven Times Its Size},
-  author = {Drake, Thomas},
+  author = {Anonymous},
   year   = {2026},
-  note   = {Preprint}
+  note   = {Under double-blind review}
 }
 ```

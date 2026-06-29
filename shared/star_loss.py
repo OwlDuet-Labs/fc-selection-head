@@ -16,9 +16,9 @@ built from the retrieval embedder's own geometry:
 The loss is the soft cross-entropy H(p_teacher, p_model). The gold (cos≈1 with
 itself) is the peak; near-twins get graded mass; unrelated candidates ≈0. The
 head learns the *shape* of the candidate neighbourhood rather than pushing one
-fixed pair apart — so it generalizes off the pinned set. On the OwlDuet router
-this was the first net-positive retrain (+3 honest e2e) where every binary-signal
-lever memorized.
+fixed pair apart — so it generalizes off the pinned set. On an internal product
+router this was the first net-positive retrain where every binary-signal lever
+memorized.
 
 INVARIANTS (carried verbatim; the trainers depend on them):
   * `lambda == 0` ⇒ the caller adds ZERO STAR term (bit-identical to stock CE).
