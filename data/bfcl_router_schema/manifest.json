@@ -1,0 +1,10 @@
+{
+  "source": "BFCL_v4_live_multiple",
+  "n_train": 919,
+  "n_holdout": 134,
+  "n_skip": 0,
+  "n_functions": 457,
+  "fn_desc_sha8": "2c63c596",
+  "star_temp": 0.08,
+  "holdout_frac": 0.15
+}

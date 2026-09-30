@@ -1,0 +1,13 @@
+{
+  "source": "BFCL_v4_live_irrelevance",
+  "category": "live_irrelevance",
+  "gold_kind": "abstain",
+  "n_train": 757,
+  "n_holdout": 127,
+  "n_skip": 0,
+  "n_functions": 481,
+  "fn_desc_sha8": "26b519fe",
+  "star_temp": 0.08,
+  "holdout_frac": 0.15,
+  "template_sha8": "58cc417d"
+}

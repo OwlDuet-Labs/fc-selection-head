@@ -1,0 +1,13 @@
+{
+  "source": "BFCL_v4_live_simple",
+  "category": "live_simple",
+  "gold_kind": "named",
+  "n_train": 217,
+  "n_holdout": 41,
+  "n_skip": 0,
+  "n_functions": 85,
+  "fn_desc_sha8": "c7124d01",
+  "star_temp": 0.08,
+  "holdout_frac": 0.15,
+  "template_sha8": "58cc417d"
+}

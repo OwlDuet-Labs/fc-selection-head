@@ -85,10 +85,28 @@ def _build_marker_toks(tokenizer) -> tuple[int, int, set]:
     return _TOK_LBRACK, _TOK_RBRACK, {_TOK_NL, _TOK_NL2}
 
 
+import os as _os
+
+
+def _cand_line(i: int, c: dict) -> str:
+    """One candidate line. Context level via env CTX_LEVEL (default 'names' = byte-identical to
+    the original render). 'desc'/'schema' put documentation on a CONTINUATION line so the
+    id-token span the STAR loss locates is unchanged (verified: locator stops at the id run)."""
+    level = _os.environ.get("CTX_LEVEL", "names")
+    head = f"  [{i + 1}] {c['id']}"
+    if level == "names":
+        return head
+    if level == "desc":
+        return f"{head}\n        {c.get('desc', '')}"
+    import json as _json
+    sch = c.get("_schema") or {"name": c["id"], "description": c.get("desc", "")}
+    return f"{head}\n        {_json.dumps(sch)}"
+
+
 def render_messages(prompt: str, candidates: list[dict], gold_index_1b: int):
     """system + user + assistant chat messages for one selection instance."""
     cand_block = "\n".join(
-        f"  [{i + 1}] {c['id']}" for i, c in enumerate(candidates)
+        _cand_line(i, c) for i, c in enumerate(candidates)
     )
     user = TEMPLATE_USER_FMT.format(
         prompt=prompt, K=len(candidates), cand_block=cand_block

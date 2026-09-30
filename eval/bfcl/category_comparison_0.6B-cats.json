@@ -1,0 +1,24 @@
+{
+  "label": "0.6B-cats",
+  "base": "mlx-community/Qwen3-0.6B-bf16",
+  "categories": [
+    {
+      "category": "live_multiple",
+      "n": 134,
+      "data": "data/bfcl_router",
+      "adapter": "adapters/m1-router-star/seed1/adapters.safetensors",
+      "vanilla_acc": 80.6,
+      "trained_acc": 91.0,
+      "delta": 10.4
+    },
+    {
+      "category": "live_irrelevance",
+      "n": 127,
+      "data": "data/bfcl_live_irrelevance",
+      "adapter": "adapters/router-live_irrelevance/seed0/adapters.safetensors",
+      "vanilla_acc": 55.9,
+      "trained_acc": 96.1,
+      "delta": 40.2
+    }
+  ]
+}
