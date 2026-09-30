@@ -1,0 +1,15 @@
+{
+  "device": "Apple M1, 16GB",
+  "note": "batch=1 single-stream, in-process MLX. tok/s + peak GB from real M1 sweep 2026-06-26.",
+  "all_runs": [
+    {"label": "0.6B",     "quant": "bf16", "load_ms": 137589, "median_ms": 879,  "p90_ms": 897,  "tok_s": 35.3, "peak_gb": 1.34},
+    {"label": "1.7B",     "quant": "bf16", "load_ms": 378217, "median_ms": 2294, "p90_ms": 2345, "tok_s": 13.5, "peak_gb": 3.59},
+    {"label": "4B",       "quant": "bf16", "load_ms": 862728, "median_ms": 5197, "p90_ms": 5250, "tok_s": 6.0,  "peak_gb": 8.16},
+    {"label": "0.6B",     "quant": "q6",   "load_ms": 64842,  "median_ms": 546,  "p90_ms": 554,  "tok_s": 56.8, "peak_gb": 0.64},
+    {"label": "1.7B",     "quant": "q6",   "load_ms": 207868, "median_ms": 1265, "p90_ms": 1290, "tok_s": 24.5, "peak_gb": 1.59},
+    {"label": "4B",       "quant": "q6",   "load_ms": 399172, "median_ms": 2800, "p90_ms": 2833, "tok_s": 11.1, "peak_gb": 3.50},
+    {"label": "0.6B",     "quant": "q4",   "load_ms": 46343,  "median_ms": 440,  "p90_ms": 448,  "tok_s": 70.4, "peak_gb": 0.49},
+    {"label": "1.7B",     "quant": "q4",   "load_ms": 119168, "median_ms": 991,  "p90_ms": 1013, "tok_s": 31.3, "peak_gb": 1.16},
+    {"label": "4B",       "quant": "q4",   "load_ms": 335148, "median_ms": 2176, "p90_ms": 2194, "tok_s": 14.2, "peak_gb": 2.52}
+  ]
+}

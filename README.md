@@ -51,6 +51,23 @@ The full trained-vs-vanilla scaling curve and the capacity ablation are reproduc
 running the eval across base sizes / adapters; per-run results are committed under
 `eval/bfcl/router_curve_*.json` and `eval/bfcl/router_capacity_*.json`.
 
+## Reproduce the figures
+
+The paper figures regenerate from the committed result JSONs (self-contained matplotlib; only
+`numpy` + `matplotlib` needed):
+
+```bash
+python figures/fig_datascaling.py   # data-scaling study
+python figures/fig_latency.py       # Figure 3 — latency & memory (Apple M1 sweep)
+```
+
+`fig_latency.py` reads `eval/bfcl/latency_result.json` (the real Apple M1, 16 GB, batch-1
+in-process sweep across Qwen3 0.6B/1.7B/4B at bf16/q6/q4) and writes
+`figures/fig_latency_paper.png`. It reproduces the paper's efficiency-beyond-parameters result:
+the trained 0.6B — which matches a vanilla 4B on accuracy — runs at **440 ms / 0.49 GB at q4**
+vs the vanilla 4B's **2176 ms / 2.52 GB**, i.e. **~4.9× faster and ~5.1× smaller at matched
+accuracy** (at bf16 the gap widens — a vanilla 4B needs 8.16 GB, half a 16 GB machine).
+
 ## Train a selector head from scratch
 
 ```bash
